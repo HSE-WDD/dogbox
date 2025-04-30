@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.red.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="shortcut icon" href="/static/paw-solid.svg" type="image/x-icon">
+    <title>DogBox</title>
+  </head>
+  <body>
+    <main class="container">
+        <nav>
+            <ul>
+              <li><a href="/"><strong>DogBox</strong></a></li>
+            </ul>
+            <ul>
+              <li>
+                <a href="/addowner">Owners</a>
+              </li>
+              <li><a href="/adddog">Dogs</a></li>
+              <li><a href="/addsub">Subscriptions</a></li>
+            </ul>
+          </nav>
+          <h1>DogBox Subscription Management System</h1>
+          {% block content %}{% endblock %}
+    </main>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h3>Select an Owner to Edit</h3>
+    <form action="/editowner" method="post">
+        {{ form.csrf_token() }}
+        {{ form.owner_id.label }}
+        <fieldset role="group">
+            {{ form.owner_id() }}
+            {{ form.submit() }}
+        </fieldset>
+    </form>
+{% endblock %}

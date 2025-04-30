@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section>
+    {% if action == "add" %}
+        <h2>Add a New Owner</h2>
+        <form action="/addowner" method="post">
+    {% elif action == "edit" %}
+        <h2>Update Owner</h2>
+        <form action="/editowner/{{ owner_id }}" method="post">
+    {% endif %}
+
+        {{ form.csrf_token }}
+        {{ form.first_name.label }}{{ form.first_name(placeholder="Bob") }}
+        {{ form.last_name.label }}{{ form.last_name(placeholder="Smith") }}
+        {{ form.email.label }}{{ form.email(placeholder="test@test.com") }}
+        <button type="submit">
+            {% if action == "add" %}
+                Add Owner
+            {% else %}
+                Save Changes
+            {% endif %}
+        </button>
+    </form>
+</section>
+{% endblock %}
+
+
+
+
+
+
+
+
+
